@@ -144,6 +144,8 @@ export default class Bao {
       port: listen.port || 3000,
       development: listen.development || false,
       hostname: listen.hostname || "0.0.0.0",
+      keyFile: listen.keyFile || null,
+      certFile: listen.certFile || null,
     };
   }
 }
@@ -152,6 +154,8 @@ interface IListen {
   port?: number;
   hostname?: string;
   development?: boolean;
+  keyFile?: string;
+  certFile?: string;
 }
 
 export interface IHandler {
